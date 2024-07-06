@@ -31,21 +31,21 @@ func randomize_obstacles():
 	obstacle_instance.position.y = 128
 	add_child(obstacle_instance)
 	instances.append(obstacle_instance)
-	#obstacle_instance = obstacle1.instantiate()
-	#obstacle_instance.position.x = 2048 + 3840 + 1500
-	#obstacle_instance.position.y = 128
-	#add_child(obstacle_instance)
-	#instances.append(obstacle_instance)
-	#obstacle_instance = obstacle2.instantiate()
-	#obstacle_instance.position.x = 2048 + 3840 + 3840 + 1500
-	#obstacle_instance.position.y = 128
-	#add_child(obstacle_instance)
-	#instances.append(obstacle_instance)
-	#obstacle_instance = obstacle3.instantiate()
-	#obstacle_instance.position.x = 2048 + 3840 + 3840 + 1500 + 3840
-	#obstacle_instance.position.y = 128
-	#add_child(obstacle_instance)
-	#instances.append(obstacle_instance)
+	obstacle_instance = obstacle1.instantiate()
+	obstacle_instance.position.x = 2048 + 3840 + 1500
+	obstacle_instance.position.y = 128
+	add_child(obstacle_instance)
+	instances.append(obstacle_instance)
+	obstacle_instance = obstacle2.instantiate()
+	obstacle_instance.position.x = 2048 + 3840 + 3840 + 1500
+	obstacle_instance.position.y = 128
+	add_child(obstacle_instance)
+	instances.append(obstacle_instance)
+	obstacle_instance = obstacle3.instantiate()
+	obstacle_instance.position.x = 2048 + 3840 + 3840 + 1500 + 3840
+	obstacle_instance.position.y = 128
+	add_child(obstacle_instance)
+	instances.append(obstacle_instance)
 	
 func game_over():
 	set_process(false)
