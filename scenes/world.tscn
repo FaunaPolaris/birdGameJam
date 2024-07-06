@@ -11,7 +11,7 @@ script = ExtResource("1_78c34")
 [node name="Background" parent="." instance=ExtResource("3_smyhh")]
 
 [node name="Player" parent="." instance=ExtResource("2_6yh38")]
-scale = Vector2(3, 3)
+scale = Vector2(6, 6)
 script = ExtResource("4_deup2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
