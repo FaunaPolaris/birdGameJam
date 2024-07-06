@@ -62,7 +62,7 @@ func	generate_scenes():
 		var scene
 		scene = scene_type.instantiate()
 		var scene_width = 3840
-		var scene_x : int = 3840 + distance + 300
+		var scene_x : int = 3840 + distance + 500
 		last_scene = scene
 		scene.position = Vector2i(scene_x, 128)
 		add_child(scene)
