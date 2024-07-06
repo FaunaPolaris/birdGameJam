@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cayquqslgrhn1"]
+
+[ext_resource type="Texture2D" uid="uid://4hdd73r4kpyo" path="res://assets/test_bg.png" id="1_f06e5"]
+[ext_resource type="PackedScene" uid="uid://b1lhjk031rhsr" path="res://player.tscn" id="2_wjnwx"]
+
+[node name="World" type="Node2D"]
+
+[node name="TestBg" type="Sprite2D" parent="."]
+position = Vector2(958, 546)
+scale = Vector2(1, 1.0037)
+texture = ExtResource("1_f06e5")
+
+[node name="Player" parent="." instance=ExtResource("2_wjnwx")]
+position = Vector2(640, 36)
+scale = Vector2(3, 3)
