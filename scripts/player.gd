@@ -3,8 +3,8 @@ extends CharacterBody2D
 var move : = 3
 var maxPos : = 56
 var minPos : = 1024
+var hunger : float = 10
 @onready var _animated_sprite = $AnimatedSprite2D
-
 const MAX_SPEED : = 500
 const ACCEL : = 1500
 const FRICTION : = 800
@@ -27,7 +27,9 @@ func get_input():
 func player_movement(delta):
 	input = get_input()
 	
-	print("Recived order: ", input.y, " current position is: ", self.position.y)
+	hunger -= .03
+	if hunger < 0:
+		get_parent().game_over()
 	if self.position.y < minPos:
 		self.position.y -= GRAVITY
 	if input.y == 0:

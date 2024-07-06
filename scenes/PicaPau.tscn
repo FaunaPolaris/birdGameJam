@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cixgpx7ka2n00"]
+
+[ext_resource type="Script" path="res://scenes/PicaPau.gd" id="1_0qsyi"]
+[ext_resource type="Texture2D" uid="uid://b3ucnf881hjfq" path="res://assets/picaPauAmarelo.png" id="1_6gfa4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ov57k"]
+size = Vector2(78, 35)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_0qsyi")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, -0.5)
+shape = SubResource("RectangleShape2D_ov57k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("1_6gfa4")
