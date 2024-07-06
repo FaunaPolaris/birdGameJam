@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://e2s3xvv4lr4d"]
+
+[ext_resource type="Texture2D" uid="uid://xi1ahek1qv0n" path="res://assets/gameOverScreen.png" id="1_byte5"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(962, 541)
+scale = Vector2(0.60125, 0.601111)
+texture = ExtResource("1_byte5")

@@ -1,9 +1,15 @@
 extends Node2D
 
-var obstacle = preload("res://scenes/levels/level_1.tscn")
-var obstacle1 = preload("res://scenes/levels/level_2.tscn")
-var obstacle2 = preload("res://scenes/levels/level_3.tscn")
-var obstacle3 = preload("res://scenes/levels/level_4.tscn")
+const obstacle = preload("res://scenes/levels/level_1.tscn")
+const obstacle1 = preload("res://scenes/levels/level_2.tscn")
+const obstacle2 = preload("res://scenes/levels/level_3.tscn")
+const obstacle3 = preload("res://scenes/levels/level_4.tscn")
+const game_over_img = preload("res://scenes/game_over_scene.tscn")
+var scene_types := [obstacle, obstacle1, obstacle2, obstacle3]
+var obstacles : Array
+var distance : float
+var last_scene
+
 
 var instances : Array
 
@@ -19,52 +25,39 @@ func _ready():
 	new_game()
 
 func new_game():
-	randomize_obstacles()
+	#randomize_obstacles()
+	distance = 0
 	$Player.position = PLAYER_START_POS
 	$Player.velocity = Vector2i(0, 0)
 	$Camera2D.position = CAM_START_POS
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
-func randomize_obstacles():
-	var obstacle_instance = obstacle.instantiate()
-	obstacle_instance.position.x = 2048
-	obstacle_instance.position.y = 128
-	add_child(obstacle_instance)
-	instances.append(obstacle_instance)
-	obstacle_instance = obstacle1.instantiate()
-	obstacle_instance.position.x = 2048 + 3840 + 1500
-	obstacle_instance.position.y = 128
-	add_child(obstacle_instance)
-	instances.append(obstacle_instance)
-	obstacle_instance = obstacle2.instantiate()
-	obstacle_instance.position.x = 2048 + 3840 + 3840 + 1500
-	obstacle_instance.position.y = 128
-	add_child(obstacle_instance)
-	instances.append(obstacle_instance)
-	obstacle_instance = obstacle3.instantiate()
-	obstacle_instance.position.x = 2048 + 3840 + 3840 + 1500 + 3840
-	obstacle_instance.position.y = 128
-	add_child(obstacle_instance)
-	instances.append(obstacle_instance)
-	
-func game_over():
-	#$Player._animated_sprite.play("tree_collision")
-	#set_process(false)
-	pass
-	
+func	generate_scenes():
+	if obstacles.is_empty() or last_scene.position.x < distance + 100:
+		var scene_type = scene_types[randi() % scene_types.size()]
+		var scene
+		scene = scene_type.instantiate()
+		var scene_width = 3840
+		var scene_x : int = 3840 + distance + 300
+		last_scene = scene
+		scene.position = Vector2i(scene_x, 128)
+		add_child(scene)
+		obstacles.append(scene)
+
 func _process(_delta):
 	player_speed = START_SPEED
 	environment_speed = START_SPEED * .5
 	
 	get_node("hungerBar").texture.width = $Player.hunger * 100
-	#for tree in instances:
-		#tree.position.x += environment_speed
-		#if tree.get_node("Area").has_overlapping_bodies():
-			#set_process(not is_processing())
-	
+	distance += player_speed
+	generate_scenes()
+	#randomize_obstacles()
 	$hungerBar.position.x += player_speed
 	$Player.position.x += player_speed
 	$Camera2D.position.x += player_speed
 
-
+func game_over():
+	$Player._animated_sprite.play("tree_collision")
+	set_process(false)
+	var game_over_scene = game_over_img.instantiate()
 
