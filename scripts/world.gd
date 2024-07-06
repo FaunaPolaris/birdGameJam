@@ -1,6 +1,6 @@
 extends Node2D
 
-var obstacle = preload("res://scenes/obstacleTest.tscn")
+var obstacle = preload("res://scenes/levels/level_1.tscn")
 
 var instances : Array
 
@@ -30,9 +30,10 @@ func randomize_obstacles():
 	instances.append(obstacle_instance)
 	
 func game_over():
+	$Player._animated_sprite.play("tree_collision")
 	set_process(false)
 	
-func _process(delta):
+func _process(_delta):
 	player_speed = START_SPEED
 	environment_speed = START_SPEED * .5
 	
