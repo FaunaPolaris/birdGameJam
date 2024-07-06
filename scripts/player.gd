@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 var move : = 3
-var minPos : = 36
-var maxPos : = 1044
+var maxPos : = 56
+var minPos : = 1024
 @onready var _animated_sprite = $AnimationPlayer
 
 const MAX_SPEED : = 500
@@ -21,7 +21,14 @@ func get_input():
 func player_movement(delta):
 	input = get_input()
 	
-	if input == Vector2.ZERO:
+	print("Recived order: ", input.y, " current position is: ", self.position.y)
+	if self.position.y <= maxPos && input.y == -1:
+		velocity = Vector2.ZERO
+		return
+	elif self.position.y >= minPos && input.y == 1:
+		velocity = Vector2.ZERO
+		return
+	elif input == Vector2.ZERO:
 		if velocity.length() > (FRICTION * delta):
 			velocity -= velocity.normalized() * (FRICTION * delta)
 		else:
