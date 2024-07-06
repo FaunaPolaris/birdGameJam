@@ -1,6 +1,9 @@
 extends Node2D
 
-var obstacle = preload("res://scenes/obstacleTest.tscn")
+var obstacle = preload("res://scenes/levels/level_1.tscn")
+var obstacle1 = preload("res://scenes/levels/level_2.tscn")
+var obstacle2 = preload("res://scenes/levels/level_3.tscn")
+var obstacle3 = preload("res://scenes/levels/level_4.tscn")
 
 var instances : Array
 
@@ -24,10 +27,25 @@ func new_game():
 
 func randomize_obstacles():
 	var obstacle_instance = obstacle.instantiate()
-	obstacle_instance.position.x = 1024
+	obstacle_instance.position.x = 2048
 	obstacle_instance.position.y = 128
 	add_child(obstacle_instance)
 	instances.append(obstacle_instance)
+	#obstacle_instance = obstacle1.instantiate()
+	#obstacle_instance.position.x = 2048 + 3840 + 1500
+	#obstacle_instance.position.y = 128
+	#add_child(obstacle_instance)
+	#instances.append(obstacle_instance)
+	#obstacle_instance = obstacle2.instantiate()
+	#obstacle_instance.position.x = 2048 + 3840 + 3840 + 1500
+	#obstacle_instance.position.y = 128
+	#add_child(obstacle_instance)
+	#instances.append(obstacle_instance)
+	#obstacle_instance = obstacle3.instantiate()
+	#obstacle_instance.position.x = 2048 + 3840 + 3840 + 1500 + 3840
+	#obstacle_instance.position.y = 128
+	#add_child(obstacle_instance)
+	#instances.append(obstacle_instance)
 	
 func game_over():
 	set_process(false)

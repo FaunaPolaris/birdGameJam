@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj8q2balxskr2"]
+
+[ext_resource type="Texture2D" uid="uid://c1apsysbw4sgu" path="res://assets/picaPauAmareloOvo.png" id="1_y35nk"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("1_y35nk")
