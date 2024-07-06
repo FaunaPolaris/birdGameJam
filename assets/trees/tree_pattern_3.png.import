@@ -2,24 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d184nyh4nb8ov"
-path="res://.godot/imported/arvore 48px.png-e863a92f3b2b5a55cdebc1b2ff55915d.ctex"
+uid="uid://clhtp51arcr8y"
+path="res://.godot/imported/tree_pattern_3.png-e8879112000274cf68616db7f0343ff5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/trees/arvore 48px.png"
-dest_files=["res://.godot/imported/arvore 48px.png-e863a92f3b2b5a55cdebc1b2ff55915d.ctex"]
+source_file="res://assets/trees/tree_pattern_3.png"
+dest_files=["res://.godot/imported/tree_pattern_3.png-e8879112000274cf68616db7f0343ff5.ctex"]
 
 [params]
 
-compress/mode=3
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=2
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false
 mipmaps/limit=-1
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

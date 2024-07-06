@@ -166,6 +166,7 @@ rotation = 1.5708
 shape = ExtResource("2_3gjng")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 sprite_frames = SubResource("SpriteFrames_doni3")
 animation = &"flying"
 

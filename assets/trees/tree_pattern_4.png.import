@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bt6fis6pn8agf"
-path="res://.godot/imported/arvore longa 36px.png-ec1b33cea3105b516d470daf52954f13.ctex"
+uid="uid://circ56wwltd2c"
+path="res://.godot/imported/tree_pattern_4.png-8008859da2816b1073a3b7497653c97c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/trees/arvore longa 36px.png"
-dest_files=["res://.godot/imported/arvore longa 36px.png-ec1b33cea3105b516d470daf52954f13.ctex"]
+source_file="res://assets/trees/tree_pattern_4.png"
+dest_files=["res://.godot/imported/tree_pattern_4.png-8008859da2816b1073a3b7497653c97c.ctex"]
 
 [params]
 

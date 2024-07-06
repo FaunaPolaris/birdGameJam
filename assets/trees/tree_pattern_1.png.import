@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0uq1jegwqmx"
-path="res://.godot/imported/Parallax1.png-de7e9fafe48e46d61a7871d9fb4da69e.ctex"
+uid="uid://dq5g8nfxbpjjq"
+path="res://.godot/imported/tree_pattern_1.png-dbbf320277e40118b4ce4544977f854c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Parallax1.png"
-dest_files=["res://.godot/imported/Parallax1.png-de7e9fafe48e46d61a7871d9fb4da69e.ctex"]
+source_file="res://assets/trees/tree_pattern_1.png"
+dest_files=["res://.godot/imported/tree_pattern_1.png-dbbf320277e40118b4ce4544977f854c.ctex"]
 
 [params]
 

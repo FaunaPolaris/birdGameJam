@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b0q6ja517rcu3" path="res://scenes/tree_tall.tscn" id="5_ghx33"]
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(576, 0)
+position = Vector2(576, -5)
 
 [node name="mid" parent="." instance=ExtResource("1_ktmu7")]
 position = Vector2(2312, -488)
