@@ -1,21 +1,57 @@
-[gd_scene load_steps=4 format=3 uid="uid://cixgpx7ka2n00"]
+[gd_scene load_steps=8 format=3 uid="uid://cixgpx7ka2n00"]
 
 [ext_resource type="Script" path="res://scenes/PicaPau.gd" id="1_0qsyi"]
 [ext_resource type="Texture2D" uid="uid://b3ucnf881hjfq" path="res://assets/picaPauAmarelo.png" id="1_6gfa4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ov57k"]
-size = Vector2(78, 35)
+size = Vector2(73, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxrtc"]
+atlas = ExtResource("1_6gfa4")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hrwx"]
+atlas = ExtResource("1_6gfa4")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwik0"]
+atlas = ExtResource("1_6gfa4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fxyuh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxrtc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hrwx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwik0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
 
 [node name="Node2D" type="Node2D"]
+texture_filter = 1
+scale = Vector2(3, 3)
 script = ExtResource("1_0qsyi")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1, -0.5)
+position = Vector2(1.5, -0.5)
 shape = SubResource("RectangleShape2D_ov57k")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fxyuh")
+frame_progress = 0.245299
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 texture_filter = 1
 scale = Vector2(3, 3)
 texture = ExtResource("1_6gfa4")
