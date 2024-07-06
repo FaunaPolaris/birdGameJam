@@ -1,25 +1,42 @@
 extends Node2D
 
+var obstacle = preload("res://scenes/obstacleTest.tscn")
+
+var instances : Array
+
 const PLAYER_START_POS := Vector2i(640, 576)
 const CAM_START_POS := Vector2i(960, 540)
 
-var speed : float
-const START_SPEED : float = 10.0
+var player_speed : float
+var environment_speed : float
+const START_SPEED : float = 15.0
 const MAX_SPEED : int = 25
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	new_game()
 
 func new_game():
+	var obstacle_instance = obstacle.instantiate()
+	obstacle_instance.position.x = 1024
+	obstacle_instance.position.y = 128
+	add_child(obstacle_instance)
+	instances.append(obstacle_instance)
 	$Player.position = PLAYER_START_POS
 	$Player.velocity = Vector2i(0, 0)
 	$Camera2D.position = CAM_START_POS
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta):
-	speed = START_SPEED
+	player_speed = START_SPEED
+	environment_speed = START_SPEED * .5
 	
-	$Player.position.x += speed
-	$Camera2D.position.x += speed
+	for tree in instances:
+		tree.position.x += environment_speed
+		if tree.get_node("Area").has_overlapping_bodies():
+			set_process(not is_processing())
+	
+	$Player.position.x += player_speed
+	$Camera2D.position.x += player_speed
 
 
 
