@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dsbuh0831uya3"]
 
-[ext_resource type="PackedScene" uid="uid://bck862wdxfgtt" path="res://scenes/tree.tscn" id="1_khb60"]
+[ext_resource type="PackedScene" uid="uid://bck862wdxfgtt" path="res://scenes/trees/tree.tscn" id="1_khb60"]
 [ext_resource type="Texture2D" uid="uid://cr3t3ntv6xlme" path="res://assets/trees/tree_pattern_2.png" id="2_b406y"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yt413"]
