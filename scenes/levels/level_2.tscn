@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://beda2blsca7xk"]
+[gd_scene load_steps=7 format=3 uid="uid://bbtb6yi1qc236"]
 
 [ext_resource type="PackedScene" uid="uid://bck862wdxfgtt" path="res://scenes/trees/tree.tscn" id="1_ap0bb"]
 [ext_resource type="PackedScene" uid="uid://dsbuh0831uya3" path="res://scenes/trees/tree_2.tscn" id="2_v7frh"]
@@ -15,12 +15,15 @@ position = Vector2(-143, -65)
 
 [node name="Node2D2" parent="." instance=ExtResource("2_v7frh")]
 position = Vector2(142, -551)
+script = null
 
 [node name="Node2D3" parent="." instance=ExtResource("3_x7n6u")]
 position = Vector2(314, -454)
+script = null
 
 [node name="Node2D4" parent="." instance=ExtResource("3_x7n6u")]
 position = Vector2(933, -199)
+script = null
 
 [node name="Node2D5" parent="." instance=ExtResource("4_4psdu")]
 position = Vector2(-134, 286)
@@ -45,12 +48,14 @@ position = Vector2(921, 272)
 
 [node name="Node2D12" parent="." instance=ExtResource("3_x7n6u")]
 position = Vector2(131, 225)
+script = null
 
 [node name="Node2D13" parent="." instance=ExtResource("5_2tedv")]
 position = Vector2(47, 735)
 
 [node name="Node2D14" parent="." instance=ExtResource("3_x7n6u")]
 position = Vector2(1064, -122)
+script = null
 
 [node name="Node2D15" parent="." instance=ExtResource("1_ap0bb")]
 position = Vector2(748, 7)
@@ -66,30 +71,39 @@ position = Vector2(1220, 420)
 
 [node name="Node2D19" parent="." instance=ExtResource("3_x7n6u")]
 position = Vector2(1713, -209)
+script = null
 
 [node name="Node2D20" parent="." instance=ExtResource("2_v7frh")]
 position = Vector2(1899, -188)
+script = null
 
 [node name="Node2D21" parent="." instance=ExtResource("6_uf5jb")]
 position = Vector2(2159, 94)
+script = null
 
 [node name="Node2D22" parent="." instance=ExtResource("3_x7n6u")]
 position = Vector2(2427, -576)
+script = null
 
 [node name="Node2D23" parent="." instance=ExtResource("3_x7n6u")]
 position = Vector2(2620, -254)
+script = null
 
 [node name="Node2D24" parent="." instance=ExtResource("3_x7n6u")]
 position = Vector2(2736, -245)
+script = null
 
 [node name="Node2D25" parent="." instance=ExtResource("2_v7frh")]
 position = Vector2(3014, -567)
+script = null
 
 [node name="Node2D26" parent="." instance=ExtResource("6_uf5jb")]
 position = Vector2(2824, -146)
+script = null
 
 [node name="Node2D27" parent="." instance=ExtResource("2_v7frh")]
 position = Vector2(3247, 80)
+script = null
 
 [node name="Node2D28" parent="." instance=ExtResource("5_2tedv")]
 position = Vector2(2063, 598)
@@ -132,6 +146,7 @@ position = Vector2(2985, 609)
 
 [node name="Node2D41" parent="." instance=ExtResource("6_uf5jb")]
 position = Vector2(3508, -647)
+script = null
 
 [node name="Node2D42" parent="." instance=ExtResource("4_4psdu")]
 position = Vector2(617, 847)

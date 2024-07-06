@@ -64,3 +64,7 @@ func player_movement(delta):
 		#position.y -= move 
 	#if Input.is_action_pressed("ui_down") && position.y != maxPos:
 		#position.y += move
+
+
+#func _on_area_2d_body_entered(area):
+	#get_parent().game_over() # Replace with function body.

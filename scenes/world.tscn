@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_78c34"]
 [ext_resource type="PackedScene" uid="uid://b1lhjk031rhsr" path="res://scenes/player.tscn" id="2_6yh38"]
-[ext_resource type="PackedScene" uid="uid://e2s3xvv4lr4d" path="res://scenes/game_over_scene.tscn" id="2_gcg5y"]
 [ext_resource type="PackedScene" uid="uid://uywg3xek8ju3" path="res://scenes/background.tscn" id="3_smyhh"]
+[ext_resource type="PackedScene" uid="uid://bck862wdxfgtt" path="res://scenes/trees/tree.tscn" id="4_o36hd"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_78c34")
@@ -15,4 +15,4 @@ scale = Vector2(6, 6)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="Node2D" parent="." instance=ExtResource("2_gcg5y")]
+[node name="Node2D" parent="." instance=ExtResource("4_o36hd")]

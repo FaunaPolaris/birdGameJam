@@ -126,7 +126,7 @@ shape = ExtResource("2_3gjng")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_doni3")
 animation = &"tree_collision_2"
-frame_progress = 0.333713
+frame_progress = 0.314692
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2(6, -0.5)
@@ -134,3 +134,4 @@ rotation = 1.5708
 shape = ExtResource("2_3gjng")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

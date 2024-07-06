@@ -1,11 +1,11 @@
 extends Node2D
 
-const obstacle = preload("res://scenes/levels/level_1.tscn")
+#const obstacle = preload("res://scenes/levels/level_1.tscn")
 const obstacle1 = preload("res://scenes/levels/level_2.tscn")
 const obstacle2 = preload("res://scenes/levels/level_3.tscn")
 const obstacle3 = preload("res://scenes/levels/level_4.tscn")
 const game_over_img = preload("res://scenes/game_over_scene.tscn")
-var scene_types := [obstacle, obstacle1, obstacle2, obstacle3]
+var scene_types := [obstacle1, obstacle2, obstacle3]
 var obstacles : Array
 var distance : float
 var last_scene
@@ -54,7 +54,7 @@ func new_game():
 	#add_child(obstacle_instance)
 	#instances.append(obstacle_instance)
 	
-	
+
 	
 func	generate_scenes():
 	if obstacles.is_empty() or last_scene.position.x < distance + 100:
@@ -83,7 +83,8 @@ func _process(_delta):
 	$Camera2D.position.x += player_speed
 
 func game_over():
-	$Player._animated_sprite.play("tree_collision")
-	set_process(false)
-	var game_over_scene = game_over_img.instantiate()
+	get_tree().paused = true
+	#$Player._animated_sprite.play("tree_collision")
+	#set_process(false)
+	#var game_over_scene = game_over_img.instantiate()
 
