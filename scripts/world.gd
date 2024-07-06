@@ -8,6 +8,7 @@ const game_over_img = preload("res://scenes/game_over_scene.tscn")
 var scene_types := [obstacle1, obstacle2, obstacle3]
 var obstacles : Array
 var distance : float
+var isRunning : bool = false
 var last_scene
 
 
@@ -30,6 +31,9 @@ func new_game():
 	$Player.position = PLAYER_START_POS
 	$Player.velocity = Vector2i(0, 0)
 	$Camera2D.position = CAM_START_POS
+	$GameOver.position = Vector2.ZERO
+	$Start.get_node("StartButton").show()
+	$GameOver.hide()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 #func randomize_obstacles():
@@ -69,23 +73,24 @@ func	generate_scenes():
 		obstacles.append(scene)
 
 func _process(_delta):
-	$hungerBar.texture.width = $Player.hunger * 100
-	player_speed = START_SPEED
-	environment_speed = START_SPEED * .5
-	distance += player_speed
-	generate_scenes()
-	#randomize_obstacles()
-	#for tree in instances:
-		#tree.position.x += environment_speed
-		#if tree.get_node("Area").has_overlapping_bodies():
-			#set_process(not is_processing())
-	
-	$hungerBar.position.x += player_speed
-	$Player.position.x += player_speed
-	$Camera2D.position.x += player_speed
+	if isRunning:
+		$hungerBar.texture.width = $Player.hunger * 100
+		player_speed = START_SPEED
+		environment_speed = START_SPEED * .5
+		distance += player_speed
+		generate_scenes()
+		$hungerBar.position.x += player_speed
+		$Player.position.x += player_speed
+		$Camera2D.position.x += player_speed
+		$GameOver.position.x += player_speed
+	else:
+		if Input.is_anything_pressed():
+			isRunning = true
+			$Start.get_node("StartButton").hide()
 
 func game_over():
 	get_tree().paused = true
+	$GameOver.show()
 	#$Player._animated_sprite.play("tree_collision")
 	#set_process(false)
 	#var game_over_scene = game_over_img.instantiate()
