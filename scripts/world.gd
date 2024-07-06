@@ -1,12 +1,9 @@
 extends Node2D
 
 var obstacle = preload("res://scenes/levels/level_1.tscn")
-<<<<<<< HEAD
 var obstacle1 = preload("res://scenes/levels/level_2.tscn")
 var obstacle2 = preload("res://scenes/levels/level_3.tscn")
 var obstacle3 = preload("res://scenes/levels/level_4.tscn")
-=======
->>>>>>> 047097e4f9a98595c237dbbe36c5469beca7a379
 
 var instances : Array
 
@@ -51,18 +48,21 @@ func randomize_obstacles():
 	instances.append(obstacle_instance)
 	
 func game_over():
-	$Player._animated_sprite.play("tree_collision")
-	set_process(false)
+	#$Player._animated_sprite.play("tree_collision")
+	#set_process(false)
+	pass
 	
 func _process(_delta):
 	player_speed = START_SPEED
 	environment_speed = START_SPEED * .5
 	
+	get_node("hungerBar").texture.width = $Player.hunger * 100
 	#for tree in instances:
 		#tree.position.x += environment_speed
 		#if tree.get_node("Area").has_overlapping_bodies():
 			#set_process(not is_processing())
 	
+	$hungerBar.position.x += player_speed
 	$Player.position.x += player_speed
 	$Camera2D.position.x += player_speed
 

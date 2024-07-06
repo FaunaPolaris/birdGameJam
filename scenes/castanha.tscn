@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://de750qko20lkb"]
+
+[sub_resource type="GDScript" id="GDScript_w6rvq"]
+script/source = "extends Node2D
+
+var minPos : = 1024
+
+func _process(delta):
+	#if self.position.y >= minPos:
+		#self.queue_free()
+	#self.position.y += .1
+	#self.rotation += .2
+	pass
+"
+
+[sub_resource type="Gradient" id="Gradient_2dupp"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7kbro"]
+gradient = SubResource("Gradient_2dupp")
+
+[node name="Node2D" type="Node2D"]
+script = SubResource("GDScript_w6rvq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(6, 6)
+texture = SubResource("GradientTexture2D_7kbro")
