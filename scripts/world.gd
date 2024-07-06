@@ -69,6 +69,7 @@ func	generate_scenes():
 		obstacles.append(scene)
 
 func _process(_delta):
+	$hungerBar.texture.width = $Player.hunger * 100
 	player_speed = START_SPEED
 	environment_speed = START_SPEED * .5
 	distance += player_speed
@@ -79,6 +80,7 @@ func _process(_delta):
 		#if tree.get_node("Area").has_overlapping_bodies():
 			#set_process(not is_processing())
 	
+	$hungerBar.position.x += player_speed
 	$Player.position.x += player_speed
 	$Camera2D.position.x += player_speed
 

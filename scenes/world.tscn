@@ -1,8 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://cayquqslgrhn1"]
+[gd_scene load_steps=6 format=3 uid="uid://cayquqslgrhn1"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_78c34"]
 [ext_resource type="PackedScene" uid="uid://b1lhjk031rhsr" path="res://scenes/player.tscn" id="2_6yh38"]
 [ext_resource type="PackedScene" uid="uid://uywg3xek8ju3" path="res://scenes/background.tscn" id="3_smyhh"]
+
+[sub_resource type="Gradient" id="Gradient_u5d7i"]
+offsets = PackedFloat32Array(0, 0.2, 0.304348, 0.491935, 0.678261, 0.808696, 1)
+colors = PackedColorArray(0.0901961, 0.741176, 0.0901961, 0, 0.389135, 0.488075, 0.0443587, 0.571392, 0.518391, 0.378638, 0.0245396, 0.668276, 0.678431, 0.243137, 0, 0.788235, 0.489277, 0.403288, 0.0290037, 0.645739, 0.384314, 0.492157, 0.045098, 0.566667, 0.0901961, 0.741176, 0.0901961, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_rqfy1"]
+gradient = SubResource("Gradient_u5d7i")
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_78c34")
@@ -13,3 +20,8 @@ script = ExtResource("1_78c34")
 scale = Vector2(6, 6)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="hungerBar" type="Sprite2D" parent="."]
+position = Vector2(990, 128)
+scale = Vector2(1, 52.75)
+texture = SubResource("GradientTexture1D_rqfy1")
