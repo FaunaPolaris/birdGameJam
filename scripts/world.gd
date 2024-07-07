@@ -56,4 +56,4 @@ func _process(_delta):
 
 
 func game_over():
-	get_tree().change_scene_to_file("res://scenes/game_over_scene.tscn")
+	get_tree().change_scene_to_file("res://scenes/game_over.tscn")

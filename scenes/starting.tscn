@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://db7pqdk30cjp1"]
+[gd_scene load_steps=16 format=3 uid="uid://db7pqdk30cjp1"]
 
 [ext_resource type="Texture2D" uid="uid://c5ob88n27mljd" path="res://assets/mainLeterring.png" id="1_4b343"]
 [ext_resource type="Texture2D" uid="uid://b48gubokdgo8i" path="res://assets/Parallax4.png" id="1_k3bw4"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bmeqg6q7vj1xv" path="res://assets/comecar.png" id="4_pmsgc"]
 [ext_resource type="Script" path="res://scenes/comecar.gd" id="7_rdodt"]
 [ext_resource type="Texture2D" uid="uid://lx24nyyfhq3n" path="res://assets/tucano.png" id="8_6bj0s"]
+[ext_resource type="AudioStream" uid="uid://byv2na2x35hse" path="res://sounds/ambience.mp3" id="11_ql2in"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6icnj"]
 atlas = ExtResource("8_6bj0s")
@@ -93,5 +94,10 @@ texture_filter = 1
 position = Vector2(980, 576)
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_bkjuo")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_ql2in")
+volume_db = 14.991
+autoplay = true
 
 [connection signal="timeout" from="interface/comecar/Timer" to="interface/comecar" method="_on_timer_timeout"]

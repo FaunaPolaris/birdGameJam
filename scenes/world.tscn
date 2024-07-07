@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cayquqslgrhn1"]
+[gd_scene load_steps=7 format=3 uid="uid://cayquqslgrhn1"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_78c34"]
 [ext_resource type="PackedScene" uid="uid://b1lhjk031rhsr" path="res://scenes/player.tscn" id="2_6yh38"]
 [ext_resource type="PackedScene" uid="uid://uywg3xek8ju3" path="res://scenes/background.tscn" id="3_smyhh"]
+[ext_resource type="AudioStream" uid="uid://d12vl64bfm5mq" path="res://sounds/Monplaisir - Soundtrack_01.mp3" id="4_cg4dg"]
 
 [sub_resource type="Gradient" id="Gradient_u5d7i"]
 offsets = PackedFloat32Array(0, 0.2, 0.304348, 0.491935, 0.678261, 0.808696, 1)
@@ -25,3 +26,7 @@ scale = Vector2(6, 6)
 position = Vector2(990, 128)
 scale = Vector2(1, 52.75)
 texture = SubResource("GradientTexture1D_rqfy1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_cg4dg")
+autoplay = true

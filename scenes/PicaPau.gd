@@ -1,6 +1,7 @@
 extends Node2D
 
 var hasHit : bool = false
+#var sounds := [$wp1, $wp2, $wp3, $wp4]
 
 func _process(delta):
 	position.x -= 10.0
@@ -11,4 +12,5 @@ func _process(delta):
 			hasHit = true
 			get_parent().get_node("Player").hunger -= 2
 			$wp1.play()
+			$toucan1.play()
 

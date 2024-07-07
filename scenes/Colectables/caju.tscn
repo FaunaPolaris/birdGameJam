@@ -22,3 +22,4 @@ shape = SubResource("CircleShape2D_l3i0w")
 
 [node name="Coin" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_hax51")
+volume_db = -7.495
