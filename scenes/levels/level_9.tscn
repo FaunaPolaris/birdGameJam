@@ -1,0 +1,97 @@
+[gd_scene load_steps=8 format=3 uid="uid://d3b3vhtfg0jle"]
+
+[ext_resource type="PackedScene" uid="uid://b8kw0wtfvn6ur" path="res://scenes/Colectables/caju.tscn" id="1_0jfai"]
+[ext_resource type="PackedScene" uid="uid://c1erj6lrsyqgm" path="res://scenes/trees/tree_4.tscn" id="2_kmrwe"]
+[ext_resource type="PackedScene" uid="uid://dsbuh0831uya3" path="res://scenes/trees/tree_2.tscn" id="3_mfanw"]
+[ext_resource type="PackedScene" uid="uid://bck862wdxfgtt" path="res://scenes/trees/tree.tscn" id="4_kmtbu"]
+[ext_resource type="PackedScene" uid="uid://otngf4j1sa52" path="res://scenes/trees/tree_3.tscn" id="5_eoek8"]
+[ext_resource type="PackedScene" uid="uid://dj8q2balxskr2" path="res://scenes/Colectables/Ovo.tscn" id="6_78kr3"]
+[ext_resource type="Texture2D" uid="uid://hnl71vlj3ss4" path="res://novos do projeto/assets/Level 9.png" id="7_11f1d"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D46" parent="." instance=ExtResource("1_0jfai")]
+position = Vector2(426, 668)
+
+[node name="Node2D47" parent="." instance=ExtResource("1_0jfai")]
+position = Vector2(813, 592)
+
+[node name="Node2D49" parent="." instance=ExtResource("1_0jfai")]
+position = Vector2(1264, 552)
+
+[node name="Node2D51" parent="." instance=ExtResource("1_0jfai")]
+position = Vector2(1654, 776)
+
+[node name="Node2D53" parent="." instance=ExtResource("1_0jfai")]
+position = Vector2(2062, 625)
+
+[node name="Node2D55" parent="." instance=ExtResource("1_0jfai")]
+position = Vector2(2429, 504)
+
+[node name="Node2D57" parent="." instance=ExtResource("1_0jfai")]
+position = Vector2(2778, 575)
+
+[node name="Node2D60" parent="." instance=ExtResource("1_0jfai")]
+position = Vector2(3065, 761)
+
+[node name="Node2D59" parent="." instance=ExtResource("1_0jfai")]
+position = Vector2(4242, 585)
+
+[node name="Node2D61" parent="." instance=ExtResource("1_0jfai")]
+position = Vector2(3395, 817)
+
+[node name="Node2D62" parent="." instance=ExtResource("1_0jfai")]
+position = Vector2(3684, 785)
+
+[node name="Node2D63" parent="." instance=ExtResource("1_0jfai")]
+position = Vector2(3937, 685)
+
+[node name="Node2D" parent="." instance=ExtResource("2_kmrwe")]
+position = Vector2(601, 192)
+
+[node name="Node2D2" parent="." instance=ExtResource("3_mfanw")]
+position = Vector2(809, -308)
+
+[node name="Node2D3" parent="." instance=ExtResource("4_kmtbu")]
+position = Vector2(1094, 110)
+
+[node name="Node2D4" parent="." instance=ExtResource("5_eoek8")]
+position = Vector2(1383, -471)
+
+[node name="Node2D5" parent="." instance=ExtResource("3_mfanw")]
+position = Vector2(1640, -155)
+
+[node name="Node2D6" parent="." instance=ExtResource("5_eoek8")]
+position = Vector2(1975, 269)
+
+[node name="Node2D7" parent="." instance=ExtResource("4_kmtbu")]
+position = Vector2(2350, 77)
+
+[node name="Node2D8" parent="." instance=ExtResource("2_kmrwe")]
+position = Vector2(2059, -485)
+
+[node name="Node2D9" parent="." instance=ExtResource("3_mfanw")]
+position = Vector2(2770, 237)
+
+[node name="Node2D40" parent="." instance=ExtResource("6_78kr3")]
+position = Vector2(1551, 314)
+
+[node name="Node2D42" parent="." instance=ExtResource("6_78kr3")]
+position = Vector2(3798, 459)
+
+[node name="Node2D10" parent="." instance=ExtResource("5_eoek8")]
+position = Vector2(3189, -85)
+
+[node name="Node2D11" parent="." instance=ExtResource("4_kmtbu")]
+position = Vector2(3549, -61)
+
+[node name="Node2D12" parent="." instance=ExtResource("2_kmrwe")]
+position = Vector2(3693, -353)
+
+[node name="Level9" type="Sprite2D" parent="."]
+position = Vector2(2165.2, 543.188)
+scale = Vector2(3.02326, 3.02326)
+texture = ExtResource("7_11f1d")
+
+[node name="Node2D13" parent="." instance=ExtResource("6_78kr3")]
+position = Vector2(2353, 938)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cbuebcjxe2vd0"]
+[gd_scene load_steps=8 format=3 uid="uid://cbuebcjxe2vd0"]
 
 [ext_resource type="PackedScene" uid="uid://bck862wdxfgtt" path="res://scenes/trees/tree.tscn" id="1_km2jq"]
 [ext_resource type="PackedScene" uid="uid://dsbuh0831uya3" path="res://scenes/trees/tree_2.tscn" id="2_7jgke"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b8kw0wtfvn6ur" path="res://scenes/Colectables/caju.tscn" id="4_el8d8"]
 [ext_resource type="PackedScene" uid="uid://otngf4j1sa52" path="res://scenes/trees/tree_3.tscn" id="5_kebe0"]
 [ext_resource type="PackedScene" uid="uid://dj8q2balxskr2" path="res://scenes/Colectables/Ovo.tscn" id="6_c02ce"]
+[ext_resource type="Texture2D" uid="uid://bacvdxmusqn08" path="res://novos do projeto/assets/Level 5.png" id="7_yqrh0"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(576, -5)
@@ -38,7 +39,7 @@ position = Vector2(428, -106)
 position = Vector2(1723, 126)
 
 [node name="Node2D16" parent="." instance=ExtResource("4_el8d8")]
-position = Vector2(3371, 181)
+position = Vector2(3434, 124)
 
 [node name="Node2D17" parent="." instance=ExtResource("4_el8d8")]
 position = Vector2(2010, 195)
@@ -76,8 +77,11 @@ position = Vector2(2855, 93)
 [node name="Node2D28" parent="." instance=ExtResource("6_c02ce")]
 position = Vector2(608, 645)
 
+[node name="Node2D33" parent="." instance=ExtResource("6_c02ce")]
+position = Vector2(608, 645)
+
 [node name="Node2D29" parent="." instance=ExtResource("4_el8d8")]
-position = Vector2(3024, 324)
+position = Vector2(2970, 276)
 
 [node name="Node2D31" parent="." instance=ExtResource("4_el8d8")]
 position = Vector2(2354, 572)
@@ -86,7 +90,7 @@ position = Vector2(2354, 572)
 position = Vector2(2589, 557)
 
 [node name="Node2D34" parent="." instance=ExtResource("4_el8d8")]
-position = Vector2(2788, 473)
+position = Vector2(2817, 397)
 
 [node name="Node2D37" parent="." instance=ExtResource("4_el8d8")]
 position = Vector2(1076, 749)
@@ -101,7 +105,7 @@ position = Vector2(2283, 101)
 position = Vector2(269, 793)
 
 [node name="Node2D15" parent="." instance=ExtResource("4_el8d8")]
-position = Vector2(3187, 223)
+position = Vector2(3173, 180)
 
 [node name="Node2D30" parent="." instance=ExtResource("6_c02ce")]
 position = Vector2(3145, 644)
@@ -114,3 +118,8 @@ position = Vector2(3861, -160)
 
 [node name="Node2D10" parent="." instance=ExtResource("5_kebe0")]
 position = Vector2(3793, -296)
+
+[node name="Level5" type="Sprite2D" parent="."]
+position = Vector2(1720, 549)
+scale = Vector2(3.03611, 3.03611)
+texture = ExtResource("7_yqrh0")

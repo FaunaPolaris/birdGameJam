@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dq3hble0uxbwe"]
+[gd_scene load_steps=8 format=3 uid="uid://dq3hble0uxbwe"]
 
 [ext_resource type="PackedScene" uid="uid://bck862wdxfgtt" path="res://scenes/trees/tree.tscn" id="1_xby47"]
 [ext_resource type="PackedScene" uid="uid://dsbuh0831uya3" path="res://scenes/trees/tree_2.tscn" id="2_40j41"]
@@ -6,9 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://b8kw0wtfvn6ur" path="res://scenes/Colectables/caju.tscn" id="4_ryy73"]
 [ext_resource type="PackedScene" uid="uid://otngf4j1sa52" path="res://scenes/trees/tree_3.tscn" id="5_wvuhu"]
 [ext_resource type="PackedScene" uid="uid://dj8q2balxskr2" path="res://scenes/Colectables/Ovo.tscn" id="6_464g0"]
+[ext_resource type="Texture2D" uid="uid://5sr0pc5wnlea" path="res://novos do projeto/assets/Level 4.png" id="7_cqaqk"]
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(576, -5)
+position = Vector2(576, -150)
 
 [node name="Node2D" parent="." instance=ExtResource("1_xby47")]
 position = Vector2(-87, -480)
@@ -123,3 +124,8 @@ position = Vector2(3427, 691)
 
 [node name="Node2D30" parent="." instance=ExtResource("6_464g0")]
 position = Vector2(1757, 52)
+
+[node name="Level4" type="Sprite2D" parent="."]
+position = Vector2(1704, 509)
+scale = Vector2(3.06111, 3.06111)
+texture = ExtResource("7_cqaqk")
