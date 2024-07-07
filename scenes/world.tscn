@@ -1,10 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cayquqslgrhn1"]
+[gd_scene load_steps=6 format=3 uid="uid://cayquqslgrhn1"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_78c34"]
 [ext_resource type="PackedScene" uid="uid://b1lhjk031rhsr" path="res://scenes/player.tscn" id="2_6yh38"]
 [ext_resource type="PackedScene" uid="uid://uywg3xek8ju3" path="res://scenes/background.tscn" id="3_smyhh"]
-[ext_resource type="PackedScene" uid="uid://e2s3xvv4lr4d" path="res://scenes/game_over_scene.tscn" id="4_mxhve"]
-[ext_resource type="PackedScene" uid="uid://b4e3rad1p7bu3" path="res://scenes/Buttons/start.tscn" id="5_y8uqo"]
 
 [sub_resource type="Gradient" id="Gradient_u5d7i"]
 offsets = PackedFloat32Array(0, 0.2, 0.304348, 0.491935, 0.678261, 0.808696, 1)
@@ -27,8 +25,3 @@ scale = Vector2(6, 6)
 position = Vector2(990, 128)
 scale = Vector2(1, 52.75)
 texture = SubResource("GradientTexture1D_rqfy1")
-
-[node name="GameOver" parent="." instance=ExtResource("4_mxhve")]
-z_index = 2
-
-[node name="Start" parent="." instance=ExtResource("5_y8uqo")]

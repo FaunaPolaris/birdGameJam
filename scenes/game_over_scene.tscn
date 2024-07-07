@@ -1,10 +1,33 @@
-[gd_scene load_steps=2 format=3 uid="uid://e2s3xvv4lr4d"]
+[gd_scene load_steps=5 format=3 uid="uid://e2s3xvv4lr4d"]
 
 [ext_resource type="Texture2D" uid="uid://xi1ahek1qv0n" path="res://assets/gameOverScreen.png" id="1_byte5"]
+[ext_resource type="Script" path="res://scenes/game_over_scene.gd" id="1_rsx4p"]
+[ext_resource type="Texture2D" uid="uid://bmeqg6q7vj1xv" path="res://assets/comecar.png" id="2_8rjke"]
+[ext_resource type="Script" path="res://scenes/comecar.gd" id="3_dxvgs"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_rsx4p")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(962, 541)
 scale = Vector2(0.60125, 0.601111)
 texture = ExtResource("1_byte5")
+
+[node name="comecar" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(940, 972)
+scale = Vector2(6, 6)
+texture = ExtResource("2_8rjke")
+script = ExtResource("3_dxvgs")
+
+[node name="Timer" type="Timer" parent="comecar"]
+wait_time = 0.5
+autostart = true
+
+[node name="wait for input collection" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="comecar/Timer" to="comecar" method="_on_timer_timeout"]
+[connection signal="timeout" from="wait for input collection" to="." method="_on_wait_for_input_collection_timeout"]

@@ -26,40 +26,12 @@ func _ready():
 	new_game()
 
 func new_game():
-	#randomize_obstacles()
 	distance = 0
+	
 	$Player.position = PLAYER_START_POS
 	$Player.velocity = Vector2i(0, 0)
 	$Camera2D.position = CAM_START_POS
-	$GameOver.position = Vector2.ZERO
-	$Start.get_node("StartButton").show()
-	$GameOver.hide()
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 
-#func randomize_obstacles():
-	#var obstacle_instance = obstacle.instantiate()
-	#obstacle_instance.position.x = 2048
-	#obstacle_instance.position.y = 128
-	#add_child(obstacle_instance)
-	#instances.append(obstacle_instance)
-	#obstacle_instance = obstacle1.instantiate()
-	#obstacle_instance.position.x = 2048 + 3840 + 1500
-	#obstacle_instance.position.y = 128
-	#add_child(obstacle_instance)
-	#instances.append(obstacle_instance)
-	#obstacle_instance = obstacle2.instantiate()
-	#obstacle_instance.position.x = 2048 + 3840 + 3840 + 1500
-	#obstacle_instance.position.y = 128
-	#add_child(obstacle_instance)
-	#instances.append(obstacle_instance)
-	#obstacle_instance = obstacle3.instantiate()
-	#obstacle_instance.position.x = 2048 + 3840 + 3840 + 1500 + 3840
-	#obstacle_instance.position.y = 128
-	#add_child(obstacle_instance)
-	#instances.append(obstacle_instance)
-	
-
-	
 func	generate_scenes():
 	if obstacles.is_empty() or last_scene.position.x < distance + 100:
 		var scene_type = scene_types[randi() % scene_types.size()]
@@ -73,25 +45,15 @@ func	generate_scenes():
 		obstacles.append(scene)
 
 func _process(_delta):
-	if isRunning:
-		$hungerBar.texture.width = $Player.hunger * 100
-		player_speed = START_SPEED
-		environment_speed = START_SPEED * .5
-		distance += player_speed
-		generate_scenes()
-		$hungerBar.position.x += player_speed
-		$Player.position.x += player_speed
-		$Camera2D.position.x += player_speed
-		$GameOver.position.x += player_speed
-	else:
-		if Input.is_anything_pressed():
-			isRunning = true
-			$Start.get_node("StartButton").hide()
+	$hungerBar.texture.width = $Player.hunger * 100
+	player_speed = START_SPEED
+	environment_speed = START_SPEED * .5
+	distance += player_speed
+	generate_scenes()
+	$hungerBar.position.x += player_speed
+	$Player.position.x += player_speed
+	$Camera2D.position.x += player_speed
+
 
 func game_over():
-	get_tree().paused = true
-	$GameOver.show()
-	#$Player._animated_sprite.play("tree_collision")
-	#set_process(false)
-	#var game_over_scene = game_over_img.instantiate()
-
+	get_tree().change_scene_to_file("res://scenes/game_over_scene.tscn")

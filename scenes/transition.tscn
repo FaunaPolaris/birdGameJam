@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://8ojlw5j55iml"]
+
+[ext_resource type="Script" path="res://scenes/transition.gd" id="1_ko0c6"]
+[ext_resource type="Texture2D" uid="uid://lx24nyyfhq3n" path="res://assets/tucano.png" id="2_sliuw"]
+[ext_resource type="PackedScene" uid="uid://uywg3xek8ju3" path="res://scenes/background.tscn" id="3_45yrg"]
+[ext_resource type="Shape2D" uid="uid://b1ilm2qme1l4v" path="res://scenes/player_shape.tres" id="4_d8oxb"]
+[ext_resource type="Script" path="res://scenes/transition_collision.gd" id="4_u8fbp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6icnj"]
+atlas = ExtResource("2_sliuw")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_df8qn"]
+atlas = ExtResource("2_sliuw")
+region = Rect2(0, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abubn"]
+atlas = ExtResource("2_sliuw")
+region = Rect2(0, 32, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s1vid"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6icnj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_df8qn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abubn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mrk1u"]
+radius = 33.3766
+
+[node name="Transition" type="Node2D"]
+script = ExtResource("1_ko0c6")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+autostart = true
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("3_45yrg")]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="tucano" type="AnimatedSprite2D" parent="Node2D"]
+texture_filter = 1
+position = Vector2(980, 576)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_s1vid")
+
+[node name="Area2D" type="Area2D" parent="Node2D/tucano"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/tucano/Area2D"]
+position = Vector2(6, -0.5)
+rotation = 1.5708
+shape = ExtResource("4_d8oxb")
+
+[node name="Camera2D" type="Camera2D" parent="Node2D"]
+offset = Vector2(960, 540)
+
+[node name="Area2D" type="Area2D" parent="Node2D"]
+script = ExtResource("4_u8fbp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D"]
+position = Vector2(640, 576)
+shape = SubResource("CircleShape2D_mrk1u")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

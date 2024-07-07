@@ -1,0 +1,97 @@
+[gd_scene load_steps=15 format=3 uid="uid://db7pqdk30cjp1"]
+
+[ext_resource type="Texture2D" uid="uid://c5ob88n27mljd" path="res://assets/mainLeterring.png" id="1_4b343"]
+[ext_resource type="Texture2D" uid="uid://b48gubokdgo8i" path="res://assets/Parallax4.png" id="1_k3bw4"]
+[ext_resource type="Script" path="res://scenes/starting.gd" id="1_oqvlx"]
+[ext_resource type="Texture2D" uid="uid://b6on0fmqaexin" path="res://assets/Parallax3.png" id="2_5bo28"]
+[ext_resource type="PackedScene" uid="uid://uywg3xek8ju3" path="res://scenes/background.tscn" id="2_nsjb1"]
+[ext_resource type="Texture2D" uid="uid://0raxeqmu6qer" path="res://assets/Parallax2.png" id="3_olo0r"]
+[ext_resource type="Texture2D" uid="uid://c6uodok8hso3c" path="res://assets/tutorial.png" id="3_vgnya"]
+[ext_resource type="Texture2D" uid="uid://bmeqg6q7vj1xv" path="res://assets/comecar.png" id="4_pmsgc"]
+[ext_resource type="Script" path="res://scenes/comecar.gd" id="7_rdodt"]
+[ext_resource type="Texture2D" uid="uid://lx24nyyfhq3n" path="res://assets/tucano.png" id="8_6bj0s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6icnj"]
+atlas = ExtResource("8_6bj0s")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_df8qn"]
+atlas = ExtResource("8_6bj0s")
+region = Rect2(0, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abubn"]
+atlas = ExtResource("8_6bj0s")
+region = Rect2(0, 32, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bkjuo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6icnj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_df8qn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abubn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="starting" type="Node2D"]
+script = ExtResource("1_oqvlx")
+
+[node name="background" type="Node2D" parent="."]
+visible = false
+
+[node name="layer1" type="Sprite2D" parent="background"]
+position = Vector2(960, 540)
+texture = ExtResource("1_k3bw4")
+
+[node name="layer2" type="Sprite2D" parent="background"]
+position = Vector2(960, 540)
+texture = ExtResource("2_5bo28")
+
+[node name="layer3" type="Sprite2D" parent="background"]
+position = Vector2(960, 540)
+texture = ExtResource("3_olo0r")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_nsjb1")]
+
+[node name="interface" type="Node2D" parent="."]
+
+[node name="Title" type="Sprite2D" parent="interface"]
+texture_filter = 1
+position = Vector2(990, 280)
+scale = Vector2(10, 10)
+texture = ExtResource("1_4b343")
+
+[node name="Camera2D" type="Camera2D" parent="interface"]
+offset = Vector2(960, 540)
+
+[node name="tutorial" type="Sprite2D" parent="interface"]
+texture_filter = 1
+position = Vector2(990, 800)
+scale = Vector2(6, 6)
+texture = ExtResource("3_vgnya")
+
+[node name="comecar" type="Sprite2D" parent="interface"]
+texture_filter = 1
+position = Vector2(990, 960)
+scale = Vector2(6, 6)
+texture = ExtResource("4_pmsgc")
+script = ExtResource("7_rdodt")
+
+[node name="Timer" type="Timer" parent="interface/comecar"]
+wait_time = 0.5
+autostart = true
+
+[node name="tucano" type="AnimatedSprite2D" parent="interface"]
+texture_filter = 1
+position = Vector2(980, 576)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_bkjuo")
+
+[connection signal="timeout" from="interface/comecar/Timer" to="interface/comecar" method="_on_timer_timeout"]
