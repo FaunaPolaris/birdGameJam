@@ -4,43 +4,40 @@
 [ext_resource type="Script" path="res://scenes/trees/tree_3.gd" id="2_4na85"]
 [ext_resource type="Texture2D" uid="uid://clhtp51arcr8y" path="res://assets/trees/tree_pattern_3.png" id="2_6v0yh"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sucp4"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ib3ku"]
 radius = 56.0
-height = 214.64
+height = 160.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ms1ex"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sngd0"]
 radius = 56.0
-height = 159.839
+height = 182.073
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sln0b"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_33f0f"]
 radius = 48.4666
 height = 166.933
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hgdpl"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_46iky"]
 radius = 48.4666
 height = 144.0
 
-[node name="Node2D" instance=ExtResource("1_vilqc")]
+[node name="Tree3" instance=ExtResource("1_vilqc")]
 script = ExtResource("2_4na85")
 
-[node name="Sprite2D" parent="Area2D" index="0"]
+[node name="Sprite2D" parent="Tree" index="0"]
 texture = ExtResource("2_6v0yh")
 
-[node name="CollisionShape2D" parent="Area2D" index="1"]
-position = Vector2(-24, 656)
-rotation = 0.47822
-shape = SubResource("CapsuleShape2D_sucp4")
+[node name="CollisionShape2D" parent="Tree" index="1"]
+shape = SubResource("CapsuleShape2D_ib3ku")
 
-[node name="CollisionShape2D2" parent="Area2D" index="2"]
-position = Vector2(48, 648)
-rotation = -0.598648
-shape = SubResource("CapsuleShape2D_ms1ex")
+[node name="CollisionShape2D2" parent="Tree" index="2"]
+position = Vector2(-23, 641)
+shape = SubResource("CapsuleShape2D_sngd0")
 
-[node name="CollisionShape2D3" parent="Area2D" index="3"]
-position = Vector2(16, 648)
-rotation = 1.7942
-shape = SubResource("CapsuleShape2D_sln0b")
+[node name="CollisionShape2D3" parent="Tree" index="3"]
+position = Vector2(54, 640)
+rotation = 2.39285
+shape = SubResource("CapsuleShape2D_33f0f")
 
-[node name="CollisionShape2D4" parent="Area2D" index="4"]
-position = Vector2(32, 688)
-shape = SubResource("CapsuleShape2D_hgdpl")
+[node name="CollisionShape2D4" parent="Tree" index="4"]
+position = Vector2(43, 692)
+shape = SubResource("CapsuleShape2D_46iky")

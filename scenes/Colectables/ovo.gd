@@ -1,8 +1,8 @@
 extends Area2D
 
 var bird = preload("res://scenes/PicaPau.tscn")
+var destroy : bool = false
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if self.has_overlapping_bodies():
 		if 		get_parent().get_parent().get_parent().get_node("Player").hunger < 10:
@@ -19,4 +19,8 @@ func _process(delta):
 			else:
 				instance.position.y = randf_range(playerY - 128, playerY + 128)
 			get_parent().get_parent().get_parent().add_child(instance)
+		destroy = true
+		$"../Sprite2D".hide()
+		$"../Crack".play()
+	if not $"../Crack".is_playing() && destroy:
 		get_parent().queue_free()

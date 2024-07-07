@@ -13,6 +13,8 @@ var input = Vector2.ZERO
 
 func _physics_process(delta):
 	if Input.is_action_pressed("ui_up"):
+		if not $Flap.is_playing():
+			$Flap.play()
 		_animated_sprite.play("flying")
 	elif Input.is_action_pressed("ui_down"):
 		_animated_sprite.play("diving")
@@ -59,14 +61,9 @@ func player_movement(delta):
 					self.rotation += .04
 			velocity = velocity.limit_length(MAX_SPEED)
 	move_and_slide()
-#func _physics_process(delta):
-#
-	#_animated_sprite.play("flying")
-	#if Input.is_action_pressed("ui_up") && position.y != minPos:
-		#position.y -= move 
-	#if Input.is_action_pressed("ui_down") && position.y != maxPos:
-		#position.y += move
 
 
-#func _on_area_2d_body_entered(area):
-	#get_parent().game_over() # Replace with function body.
+func _on_area_2d_area_entered(area):
+	print("%s", area.name)
+	if area.name == "Tree" || area.name == "Tree2" || area.name == "Tree3" || area.name == "Tree4":
+		get_parent().game_over()

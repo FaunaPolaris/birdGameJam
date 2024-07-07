@@ -12,6 +12,6 @@ func _process(delta):
 
 
 
-func _on_area_2d_body_entered(body):
-	if body.name == "Player":
-		get_parent().get_parent().game_over() # Replace with function body.
+#func _on_area_2d_body_entered(body):
+	#if body.name == "Player":
+		#get_parent().get_parent().game_over() # Replace with function body.

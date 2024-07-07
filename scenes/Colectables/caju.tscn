@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8kw0wtfvn6ur"]
+[gd_scene load_steps=5 format=3 uid="uid://b8kw0wtfvn6ur"]
 
 [ext_resource type="Texture2D" uid="uid://2xmiy833el0j" path="res://assets/Caju.png" id="1_1xlqf"]
 [ext_resource type="Script" path="res://scenes/Colectables/caju.gd" id="2_sug27"]
+[ext_resource type="AudioStream" uid="uid://d1ve4vjpmmm8h" path="res://sounds/coin2.wav" id="3_hax51"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l3i0w"]
 radius = 36.1248
@@ -18,3 +19,6 @@ script = ExtResource("2_sug27")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_l3i0w")
+
+[node name="Coin" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_hax51")
