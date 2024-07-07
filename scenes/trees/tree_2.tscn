@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dsbuh0831uya3"]
+[gd_scene load_steps=9 format=3 uid="uid://dsbuh0831uya3"]
 
 [ext_resource type="PackedScene" uid="uid://bck862wdxfgtt" path="res://scenes/trees/tree.tscn" id="1_khb60"]
 [ext_resource type="Texture2D" uid="uid://cr3t3ntv6xlme" path="res://assets/trees/tree_pattern_2.png" id="2_b406y"]
+[ext_resource type="Script" path="res://scenes/trees/tree_2.gd" id="2_oswqq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yt413"]
 radius = 56.0
@@ -24,6 +25,7 @@ radius = 48.4666
 height = 144.0
 
 [node name="Node2D" instance=ExtResource("1_khb60")]
+script = ExtResource("2_oswqq")
 
 [node name="Sprite2D" parent="Area2D" index="0"]
 texture = ExtResource("2_b406y")
