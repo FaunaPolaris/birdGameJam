@@ -4,9 +4,15 @@ extends Node2D
 const obstacle1 = preload("res://scenes/levels/level_2.tscn")
 const obstacle2 = preload("res://scenes/levels/level_3.tscn")
 const obstacle3 = preload("res://scenes/levels/level_4.tscn")
+const obstacle4 = preload("res://scenes/levels/level_5.tscn")
+const obstacle5 = preload("res://scenes/levels/level_6.tscn")
+const obstacle6 = preload("res://scenes/levels/level_7.tscn")
+const obstacle7 = preload("res://scenes/levels/level_8.tscn")
+const obstacle8 = preload("res://scenes/levels/level_9.tscn")
 const game_over_img = preload("res://scenes/game_over_scene.tscn")
-var scene_types := [obstacle1, obstacle2, obstacle3]
+var scene_types := [obstacle1, obstacle2, obstacle3, obstacle4, obstacle5, obstacle6, obstacle7, obstacle8]
 var obstacles : Array
+#var scene_types := [obstacle5]
 var distance : float
 var isRunning : bool = false
 var last_scene
@@ -40,7 +46,10 @@ func	generate_scenes():
 		var scene_width = 3840
 		var scene_x : int = 3840 + distance + 500
 		last_scene = scene
-		scene.position = Vector2i(scene_x, 128)
+		if scene_type == scene_types[7]:
+			scene.position = Vector2i(scene_x, 0)
+		else:
+			scene.position = Vector2i(scene_x, 128)
 		add_child(scene)
 		obstacles.append(scene)
 
