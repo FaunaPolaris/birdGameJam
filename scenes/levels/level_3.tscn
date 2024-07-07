@@ -6,9 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://b8kw0wtfvn6ur" path="res://scenes/Colectables/caju.tscn" id="4_21dqx"]
 [ext_resource type="PackedScene" uid="uid://otngf4j1sa52" path="res://scenes/trees/tree_3.tscn" id="5_3lflm"]
 [ext_resource type="PackedScene" uid="uid://dj8q2balxskr2" path="res://scenes/Colectables/Ovo.tscn" id="6_74uta"]
-[ext_resource type="Texture2D" uid="uid://0h6ffbhf8fi4" path="res://assets/Level 3.png" id="7_oagym"]
+[ext_resource type="Texture2D" uid="uid://0h6ffbhf8fi4" path="res://novos do projeto/assets/Level 3.png" id="7_vy43j"]
 
 [node name="Node2D" type="Node2D"]
+z_index = -1
 position = Vector2(576, -5)
 
 [node name="Node2D" parent="." instance=ExtResource("1_8rnxj")]
@@ -120,6 +121,7 @@ position = Vector2(711, 725)
 position = Vector2(3746, 230)
 
 [node name="Level3" type="Sprite2D" parent="."]
-position = Vector2(1624, 445)
-scale = Vector2(3.20833, 3.20833)
-texture = ExtResource("7_oagym")
+texture_filter = 1
+position = Vector2(1619, 494)
+scale = Vector2(3.21711, 3.21711)
+texture = ExtResource("7_vy43j")

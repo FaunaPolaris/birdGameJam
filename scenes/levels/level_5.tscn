@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bacvdxmusqn08" path="res://novos do projeto/assets/Level 5.png" id="7_yqrh0"]
 
 [node name="Node2D" type="Node2D"]
+z_index = -1
 position = Vector2(576, -5)
 
 [node name="Node2D" parent="." instance=ExtResource("1_km2jq")]
@@ -120,6 +121,7 @@ position = Vector2(3861, -160)
 position = Vector2(3793, -296)
 
 [node name="Level5" type="Sprite2D" parent="."]
-position = Vector2(1720, 549)
-scale = Vector2(3.03611, 3.03611)
+texture_filter = 1
+position = Vector2(1698.97, 578.035)
+scale = Vector2(3.03666, 3.03666)
 texture = ExtResource("7_yqrh0")

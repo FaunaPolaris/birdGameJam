@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3b3vhtfg0jle"]
+[gd_scene load_steps=8 format=3 uid="uid://okv6uvo658q6"]
 
 [ext_resource type="PackedScene" uid="uid://b8kw0wtfvn6ur" path="res://scenes/Colectables/caju.tscn" id="1_0jfai"]
 [ext_resource type="PackedScene" uid="uid://c1erj6lrsyqgm" path="res://scenes/trees/tree_4.tscn" id="2_kmrwe"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://hnl71vlj3ss4" path="res://novos do projeto/assets/Level 9.png" id="7_11f1d"]
 
 [node name="Node2D" type="Node2D"]
+z_index = -2
 
 [node name="Node2D46" parent="." instance=ExtResource("1_0jfai")]
 position = Vector2(426, 668)
@@ -89,7 +90,8 @@ position = Vector2(3549, -61)
 position = Vector2(3693, -353)
 
 [node name="Level9" type="Sprite2D" parent="."]
-position = Vector2(2165.2, 543.188)
+texture_filter = 1
+position = Vector2(2151, 569)
 scale = Vector2(3.02326, 3.02326)
 texture = ExtResource("7_11f1d")
 

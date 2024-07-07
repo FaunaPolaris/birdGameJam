@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dsbuh0831uya3"]
+[gd_scene load_steps=7 format=3 uid="uid://dsbuh0831uya3"]
 
 [ext_resource type="PackedScene" uid="uid://bck862wdxfgtt" path="res://scenes/trees/tree.tscn" id="1_khb60"]
-[ext_resource type="Texture2D" uid="uid://cr3t3ntv6xlme" path="res://assets/trees/tree_pattern_2.png" id="2_b406y"]
 [ext_resource type="Script" path="res://scenes/trees/tree_2.gd" id="2_oswqq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l7e8s"]
@@ -23,23 +22,20 @@ height = 144.0
 [node name="Tree2" instance=ExtResource("1_khb60")]
 script = ExtResource("2_oswqq")
 
-[node name="Sprite2D" parent="Tree" index="0"]
-texture = ExtResource("2_b406y")
-
-[node name="CollisionShape2D" parent="Tree" index="1"]
+[node name="CollisionShape2D" parent="Tree" index="0"]
 position = Vector2(-32, 729)
 rotation = 1.79594
 shape = SubResource("CapsuleShape2D_l7e8s")
 
-[node name="CollisionShape2D2" parent="Tree" index="2"]
+[node name="CollisionShape2D2" parent="Tree" index="1"]
 position = Vector2(-40, 638)
 shape = SubResource("CapsuleShape2D_7ripp")
 
-[node name="CollisionShape2D3" parent="Tree" index="3"]
+[node name="CollisionShape2D3" parent="Tree" index="2"]
 position = Vector2(21, 651)
 shape = SubResource("CapsuleShape2D_6bt6m")
 
-[node name="CollisionShape2D4" parent="Tree" index="4"]
+[node name="CollisionShape2D4" parent="Tree" index="3"]
 position = Vector2(81, 709)
 rotation = 0.71733
 shape = SubResource("CapsuleShape2D_m7vvc")

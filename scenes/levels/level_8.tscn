@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bjdvvwcmg8ma"]
+[gd_scene load_steps=8 format=3 uid="uid://bupsblw0620y2"]
 
 [ext_resource type="PackedScene" uid="uid://dj8q2balxskr2" path="res://scenes/Colectables/Ovo.tscn" id="1_2y3ix"]
 [ext_resource type="PackedScene" uid="uid://dsbuh0831uya3" path="res://scenes/trees/tree_2.tscn" id="1_gh62q"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dyr6ecm83fxy6" path="res://novos do projeto/assets/Level 8.png" id="7_sqcta"]
 
 [node name="Node2D" type="Node2D"]
+z_index = -1
 
 [node name="Node2D28" parent="." instance=ExtResource("1_2y3ix")]
 position = Vector2(2209, 281)
@@ -119,6 +120,7 @@ position = Vector2(3705, -98)
 position = Vector2(3967, -207)
 
 [node name="Level8" type="Sprite2D" parent="."]
-position = Vector2(2113, 541)
+texture_filter = 1
+position = Vector2(2109, 570)
 scale = Vector2(2.99757, 2.99757)
 texture = ExtResource("7_sqcta")

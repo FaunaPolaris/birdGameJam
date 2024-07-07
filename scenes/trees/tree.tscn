@@ -1,6 +1,5 @@
-[gd_scene load_steps=7 format=3 uid="uid://bck862wdxfgtt"]
+[gd_scene load_steps=6 format=3 uid="uid://bck862wdxfgtt"]
 
-[ext_resource type="Texture2D" uid="uid://dq5g8nfxbpjjq" path="res://assets/trees/tree_pattern_1.png" id="1_hoa41"]
 [ext_resource type="Script" path="res://scenes/trees/tree.gd" id="1_k2kvg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wjrn2"]
@@ -24,13 +23,6 @@ script = ExtResource("1_k2kvg")
 
 [node name="Tree" type="Area2D" parent="."]
 script = ExtResource("1_k2kvg")
-
-[node name="Sprite2D" type="Sprite2D" parent="Tree"]
-z_index = -1
-texture_filter = 1
-position = Vector2(0, 664)
-scale = Vector2(3, 3)
-texture = ExtResource("1_hoa41")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tree"]
 position = Vector2(-40, 672)

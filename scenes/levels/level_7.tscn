@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://prsv3177mg8i"]
+[gd_scene load_steps=8 format=3 uid="uid://ccawe4aytn1x6"]
 
 [ext_resource type="PackedScene" uid="uid://bck862wdxfgtt" path="res://scenes/trees/tree.tscn" id="1_xy425"]
 [ext_resource type="PackedScene" uid="uid://dsbuh0831uya3" path="res://scenes/trees/tree_2.tscn" id="2_6hs41"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bgrd8fqf32to7" path="res://novos do projeto/assets/Level 7.png" id="7_m6005"]
 
 [node name="Node2D" type="Node2D"]
+z_index = -1
 
 [node name="Node2D" parent="." instance=ExtResource("1_xy425")]
 position = Vector2(601, -45)
@@ -141,6 +142,7 @@ position = Vector2(1179, 581)
 position = Vector2(2814, 187)
 
 [node name="Level7" type="Sprite2D" parent="."]
-position = Vector2(2200, 536)
+texture_filter = 1
+position = Vector2(2200, 568)
 scale = Vector2(3.08629, 3.08628)
 texture = ExtResource("7_m6005")

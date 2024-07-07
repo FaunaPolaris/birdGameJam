@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bck862wdxfgtt" path="res://scenes/trees/tree.tscn" id="1_kn6ru"]
 
 [node name="Node2D" type="Node2D"]
+z_index = -1
 position = Vector2(576, -5)
 
 [node name="Node2D" parent="." instance=ExtResource("1_kn6ru")]

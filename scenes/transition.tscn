@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://8ojlw5j55iml"]
+[gd_scene load_steps=12 format=3 uid="uid://8ojlw5j55iml"]
 
 [ext_resource type="Script" path="res://scenes/transition.gd" id="1_ko0c6"]
 [ext_resource type="Texture2D" uid="uid://lx24nyyfhq3n" path="res://assets/tucano.png" id="2_sliuw"]
 [ext_resource type="PackedScene" uid="uid://uywg3xek8ju3" path="res://scenes/background.tscn" id="3_45yrg"]
 [ext_resource type="Shape2D" uid="uid://b1ilm2qme1l4v" path="res://scenes/player_shape.tres" id="4_d8oxb"]
 [ext_resource type="Script" path="res://scenes/transition_collision.gd" id="4_u8fbp"]
+[ext_resource type="AudioStream" uid="uid://br4o58cyteje6" path="res://sounds/trans4.wav" id="6_hjaid"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6icnj"]
 atlas = ExtResource("2_sliuw")
@@ -71,5 +72,9 @@ script = ExtResource("4_u8fbp")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D"]
 position = Vector2(640, 576)
 shape = SubResource("CircleShape2D_mrk1u")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_hjaid")
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
