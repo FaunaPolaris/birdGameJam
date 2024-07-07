@@ -1,7 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cixgpx7ka2n00"]
+[gd_scene load_steps=12 format=3 uid="uid://cixgpx7ka2n00"]
 
 [ext_resource type="Script" path="res://scenes/PicaPau.gd" id="1_0qsyi"]
 [ext_resource type="Texture2D" uid="uid://b3ucnf881hjfq" path="res://assets/picaPauAmarelo.png" id="1_6gfa4"]
+[ext_resource type="AudioStream" uid="uid://20gmrco27f0q" path="res://sounds/woodpecker_1.mp3" id="3_xe0xs"]
+[ext_resource type="AudioStream" uid="uid://t0m80krfulu7" path="res://sounds/woodpecker_2.mp3" id="4_dmlme"]
+[ext_resource type="AudioStream" uid="uid://bmt861qcg5nbu" path="res://sounds/woodpecker_3.mp3" id="5_1vi43"]
+[ext_resource type="AudioStream" uid="uid://cxcv1nvswhn7s" path="res://sounds/woodpecker_4.mp3" id="6_nhw1q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ov57k"]
 size = Vector2(73, 35)
@@ -40,9 +44,9 @@ texture_filter = 1
 scale = Vector2(3, 3)
 script = ExtResource("1_0qsyi")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Wp" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wp"]
 position = Vector2(1.5, -0.5)
 shape = SubResource("RectangleShape2D_ov57k")
 
@@ -55,3 +59,15 @@ visible = false
 texture_filter = 1
 scale = Vector2(3, 3)
 texture = ExtResource("1_6gfa4")
+
+[node name="wp1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_xe0xs")
+
+[node name="wp2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_dmlme")
+
+[node name="wp3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_1vi43")
+
+[node name="wp4" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_nhw1q")

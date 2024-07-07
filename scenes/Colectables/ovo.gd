@@ -2,12 +2,18 @@ extends Area2D
 
 var bird = preload("res://scenes/PicaPau.tscn")
 var destroy : bool = false
+var spawn : bool = false
+var defensors : int
 
 func _process(delta):
 	if self.has_overlapping_bodies():
 		if 		get_parent().get_parent().get_parent().get_node("Player").hunger < 10:
 			get_parent().get_parent().get_parent().get_node("Player").hunger += 3
-		var defensors : int = randi_range(4, 8)
+		if not spawn:	
+			defensors = randi_range(4, 8)
+			spawn = true
+		else:
+			defensors = 0
 		for enemy in defensors:
 			var instance = bird.instantiate()
 			instance.position.x = get_parent().get_parent().get_parent().get_node("Player").position.x + 2040 + randf_range(0, 512)

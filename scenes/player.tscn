@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b1lhjk031rhsr"]
+[gd_scene load_steps=20 format=3 uid="uid://b1lhjk031rhsr"]
 
 [ext_resource type="Texture2D" uid="uid://lx24nyyfhq3n" path="res://assets/tucano.png" id="1_y82w8"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_yte1r"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bsgaehyi2s5ir" path="res://assets/tucano_idle.png" id="4_drjx0"]
 [ext_resource type="Texture2D" uid="uid://cohwbkh2df6en" path="res://assets/tucano batendo copa.png" id="5_1qkex"]
 [ext_resource type="AudioStream" uid="uid://bdpqxglktxrys" path="res://sounds/flap_5_01.mp3" id="6_f8bph"]
+[ext_resource type="AudioStream" uid="uid://lqrmm1a1qkkl" path="res://sounds/toco2.mp3" id="7_duke0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wxwqw"]
 atlas = ExtResource("1_y82w8")
@@ -136,6 +137,9 @@ shape = ExtResource("2_3gjng")
 
 [node name="Flap" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_f8bph")
+
+[node name="Scream1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_duke0")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

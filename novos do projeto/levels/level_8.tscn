@@ -1,0 +1,124 @@
+[gd_scene load_steps=8 format=3 uid="uid://bjdvvwcmg8ma"]
+
+[ext_resource type="PackedScene" uid="uid://dj8q2balxskr2" path="res://scenes/Colectables/Ovo.tscn" id="1_2y3ix"]
+[ext_resource type="PackedScene" uid="uid://dsbuh0831uya3" path="res://scenes/trees/tree_2.tscn" id="1_gh62q"]
+[ext_resource type="PackedScene" uid="uid://c1erj6lrsyqgm" path="res://scenes/trees/tree_4.tscn" id="2_jt34b"]
+[ext_resource type="PackedScene" uid="uid://b8kw0wtfvn6ur" path="res://scenes/Colectables/caju.tscn" id="2_p11kl"]
+[ext_resource type="PackedScene" uid="uid://otngf4j1sa52" path="res://scenes/trees/tree_3.tscn" id="3_ucfhj"]
+[ext_resource type="PackedScene" uid="uid://bck862wdxfgtt" path="res://scenes/trees/tree.tscn" id="4_wbqpi"]
+[ext_resource type="Texture2D" uid="uid://dyr6ecm83fxy6" path="res://assets/Level 8.png" id="7_sqcta"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D28" parent="." instance=ExtResource("1_2y3ix")]
+position = Vector2(2209, 281)
+
+[node name="Node2D30" parent="." instance=ExtResource("1_2y3ix")]
+position = Vector2(3600, 775)
+
+[node name="Node2D29" parent="." instance=ExtResource("1_2y3ix")]
+position = Vector2(890, 860)
+
+[node name="Node2D59" parent="." instance=ExtResource("2_p11kl")]
+position = Vector2(5192, 584)
+
+[node name="Node2D60" parent="." instance=ExtResource("2_p11kl")]
+position = Vector2(183, 639)
+
+[node name="Node2D62" parent="." instance=ExtResource("2_p11kl")]
+position = Vector2(441, 508)
+
+[node name="Node2D64" parent="." instance=ExtResource("2_p11kl")]
+position = Vector2(734, 402)
+
+[node name="Node2D66" parent="." instance=ExtResource("2_p11kl")]
+position = Vector2(997, 348)
+
+[node name="Node2D68" parent="." instance=ExtResource("2_p11kl")]
+position = Vector2(1300, 423)
+
+[node name="Node2D70" parent="." instance=ExtResource("2_p11kl")]
+position = Vector2(1567, 526)
+
+[node name="Node2D88" parent="." instance=ExtResource("2_p11kl")]
+position = Vector2(1746, 642)
+
+[node name="Node2D73" parent="." instance=ExtResource("2_p11kl")]
+position = Vector2(1977, 729)
+
+[node name="Node2D75" parent="." instance=ExtResource("2_p11kl")]
+position = Vector2(2283, 807)
+
+[node name="Node2D77" parent="." instance=ExtResource("2_p11kl")]
+position = Vector2(2609, 797)
+
+[node name="Node2D79" parent="." instance=ExtResource("2_p11kl")]
+position = Vector2(2905, 676)
+
+[node name="Node2D81" parent="." instance=ExtResource("2_p11kl")]
+position = Vector2(3137, 511)
+
+[node name="Node2D83" parent="." instance=ExtResource("2_p11kl")]
+position = Vector2(3437, 377)
+
+[node name="Node2D85" parent="." instance=ExtResource("2_p11kl")]
+position = Vector2(3703, 266)
+
+[node name="Node2D87" parent="." instance=ExtResource("2_p11kl")]
+position = Vector2(4060, 169)
+
+[node name="Node2D" parent="." instance=ExtResource("1_gh62q")]
+position = Vector2(693, 70)
+
+[node name="Node2D2" parent="." instance=ExtResource("2_jt34b")]
+position = Vector2(337, 297)
+
+[node name="Node2D3" parent="." instance=ExtResource("3_ucfhj")]
+position = Vector2(975, -90)
+
+[node name="Node2D4" parent="." instance=ExtResource("3_ucfhj")]
+position = Vector2(408, -522)
+
+[node name="Node2D5" parent="." instance=ExtResource("4_wbqpi")]
+position = Vector2(1307, 7)
+
+[node name="Node2D6" parent="." instance=ExtResource("2_jt34b")]
+position = Vector2(1586, 323)
+
+[node name="Node2D7" parent="." instance=ExtResource("3_ucfhj")]
+position = Vector2(1273, -523)
+
+[node name="Node2D8" parent="." instance=ExtResource("1_gh62q")]
+position = Vector2(1720, -497)
+
+[node name="Node2D9" parent="." instance=ExtResource("4_wbqpi")]
+position = Vector2(2063, -205)
+
+[node name="Node2D10" parent="." instance=ExtResource("3_ucfhj")]
+position = Vector2(2426, -526)
+
+[node name="Node2D11" parent="." instance=ExtResource("2_jt34b")]
+position = Vector2(2326, -98)
+
+[node name="Node2D12" parent="." instance=ExtResource("1_gh62q")]
+position = Vector2(2659, -95)
+
+[node name="Node2D13" parent="." instance=ExtResource("3_ucfhj")]
+position = Vector2(3174, 114)
+
+[node name="Node2D14" parent="." instance=ExtResource("2_jt34b")]
+position = Vector2(3429, -89)
+
+[node name="Node2D15" parent="." instance=ExtResource("4_wbqpi")]
+position = Vector2(3477, 364)
+
+[node name="Node2D16" parent="." instance=ExtResource("1_gh62q")]
+position = Vector2(3705, -98)
+
+[node name="Node2D17" parent="." instance=ExtResource("3_ucfhj")]
+position = Vector2(3967, -207)
+
+[node name="Level8" type="Sprite2D" parent="."]
+position = Vector2(2113, 541)
+scale = Vector2(2.99757, 2.99757)
+texture = ExtResource("7_sqcta")
