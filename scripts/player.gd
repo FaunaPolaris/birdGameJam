@@ -13,17 +13,22 @@ var input = Vector2.ZERO
 
 func _physics_process(delta):
 	if Input.is_action_pressed("ui_up"):
+		Global.up_pressed = true
 		if not $Flap.is_playing():
 			$Flap.play()
 		_animated_sprite.play("flying")
 	elif Input.is_action_pressed("ui_down"):
+		Global.down_pressed = true
 		_animated_sprite.play("diving")
-	else:
+	elif Global.screen_pressed == false:
+		Global.up_pressed = false
+		Global.down_pressed = false
 		_animated_sprite.play("idle")
 	player_movement(delta)
 	
 func get_input():
-	input.y = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up"))
+	#input.y = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up"))
+	input.y = int(Global.down_pressed) - int(Global.up_pressed)
 	return input.normalized()
 	
 func player_movement(delta):

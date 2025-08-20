@@ -12,4 +12,3 @@ func _process(delta):
 	$interface.position.x += START_SPEED
 	if Input.is_anything_pressed():
 		get_tree().change_scene_to_packed(transition)
-

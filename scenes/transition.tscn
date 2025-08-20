@@ -1,10 +1,10 @@
 [gd_scene load_steps=12 format=3 uid="uid://8ojlw5j55iml"]
 
-[ext_resource type="Script" path="res://scenes/transition.gd" id="1_ko0c6"]
+[ext_resource type="Script" uid="uid://bbpvm52okd3kk" path="res://scenes/transition.gd" id="1_ko0c6"]
 [ext_resource type="Texture2D" uid="uid://lx24nyyfhq3n" path="res://assets/tucano.png" id="2_sliuw"]
 [ext_resource type="PackedScene" uid="uid://uywg3xek8ju3" path="res://scenes/background.tscn" id="3_45yrg"]
 [ext_resource type="Shape2D" uid="uid://b1ilm2qme1l4v" path="res://scenes/player_shape.tres" id="4_d8oxb"]
-[ext_resource type="Script" path="res://scenes/transition_collision.gd" id="4_u8fbp"]
+[ext_resource type="Script" uid="uid://2nvi0ianpta5" path="res://scenes/transition_collision.gd" id="4_u8fbp"]
 [ext_resource type="AudioStream" uid="uid://br4o58cyteje6" path="res://sounds/trans4.wav" id="6_hjaid"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6icnj"]
@@ -40,6 +40,7 @@ animations = [{
 radius = 33.3766
 
 [node name="Transition" type="Node2D"]
+visible = false
 script = ExtResource("1_ko0c6")
 
 [node name="Timer" type="Timer" parent="."]

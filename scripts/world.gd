@@ -63,6 +63,21 @@ func _process(_delta):
 	$Player.position.x += player_speed
 	$Camera2D.position.x += player_speed
 
-
 func game_over():
 	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
+
+func _on_screen_left_side_button_down() -> void:
+	Global.up_pressed = true
+	Global.screen_pressed = true
+
+func _on_screen_left_side_button_up() -> void:
+	Global.up_pressed = false
+	Global.screen_pressed = false
+
+func _on_screen_right_side_button_down() -> void:
+	Global.down_pressed = true
+	Global.screen_pressed = true
+
+func _on_screen_right_side_button_up() -> void:
+	Global.down_pressed = false
+	Global.screen_pressed = false

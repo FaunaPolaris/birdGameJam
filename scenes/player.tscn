@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://b1lhjk031rhsr"]
 
 [ext_resource type="Texture2D" uid="uid://lx24nyyfhq3n" path="res://assets/tucano.png" id="1_y82w8"]
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_yte1r"]
+[ext_resource type="Script" uid="uid://bggn1e1a7ny6e" path="res://scripts/player.gd" id="1_yte1r"]
 [ext_resource type="Shape2D" uid="uid://b1ilm2qme1l4v" path="res://scenes/player_shape.tres" id="2_3gjng"]
 [ext_resource type="Texture2D" uid="uid://bsgaehyi2s5ir" path="res://assets/tucano_idle.png" id="4_drjx0"]
 [ext_resource type="Texture2D" uid="uid://cohwbkh2df6en" path="res://assets/tucano batendo copa.png" id="5_1qkex"]

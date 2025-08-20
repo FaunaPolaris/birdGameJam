@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dj8q2balxskr2"]
 
 [ext_resource type="Texture2D" uid="uid://c1apsysbw4sgu" path="res://assets/picaPauAmareloOvo.png" id="1_y35nk"]
-[ext_resource type="Script" path="res://scenes/Colectables/ovo.gd" id="2_8i326"]
+[ext_resource type="Script" uid="uid://i0hcyf13uy66" path="res://scenes/Colectables/ovo.gd" id="2_8i326"]
 [ext_resource type="AudioStream" uid="uid://qhltm86jpdim" path="res://sounds/crack1.mp3" id="3_1osqc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5sa1a"]

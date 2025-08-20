@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dsbuh0831uya3" path="res://scenes/trees/tree_2.tscn" id="4_n14u4"]
 [ext_resource type="PackedScene" uid="uid://b8kw0wtfvn6ur" path="res://scenes/Colectables/caju.tscn" id="6_sa5qe"]
 [ext_resource type="PackedScene" uid="uid://dj8q2balxskr2" path="res://scenes/Colectables/Ovo.tscn" id="7_icggq"]
-[ext_resource type="Texture2D" uid="uid://br563sh7xcdo3" path="res://assets/Level 6.png" id="7_m2jeu"]
+[ext_resource type="Texture2D" uid="uid://br563sh7xcdo3" path="res://novos do projeto/assets/Level 6.png" id="7_m2jeu"]
 
 [node name="Node2D" type="Node2D"]
 

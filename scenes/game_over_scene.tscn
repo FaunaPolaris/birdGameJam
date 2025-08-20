@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://e2s3xvv4lr4d"]
 
 [ext_resource type="Texture2D" uid="uid://xi1ahek1qv0n" path="res://assets/gameOverScreen.png" id="1_byte5"]
-[ext_resource type="Script" path="res://scenes/game_over_scene.gd" id="1_rsx4p"]
+[ext_resource type="Script" uid="uid://c4btqjsvyllyx" path="res://scenes/game_over_scene.gd" id="1_rsx4p"]
 [ext_resource type="Texture2D" uid="uid://bmeqg6q7vj1xv" path="res://assets/comecar.png" id="2_8rjke"]
-[ext_resource type="Script" path="res://scenes/comecar.gd" id="3_dxvgs"]
+[ext_resource type="Script" uid="uid://e3s26wcxrqnj" path="res://scenes/comecar.gd" id="3_dxvgs"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_rsx4p")

@@ -1,9 +1,59 @@
-[gd_scene load_steps=7 format=3 uid="uid://cayquqslgrhn1"]
+[gd_scene load_steps=31 format=3 uid="uid://cayquqslgrhn1"]
 
-[ext_resource type="Script" path="res://scripts/world.gd" id="1_78c34"]
+[ext_resource type="Script" uid="uid://ds03nq8ej3il5" path="res://scripts/world.gd" id="1_78c34"]
 [ext_resource type="PackedScene" uid="uid://b1lhjk031rhsr" path="res://scenes/player.tscn" id="2_6yh38"]
 [ext_resource type="PackedScene" uid="uid://uywg3xek8ju3" path="res://scenes/background.tscn" id="3_smyhh"]
 [ext_resource type="AudioStream" uid="uid://c0l0og1ulcb1l" path="res://sounds/Monplaisir - Soundtrack_02.mp3" id="4_uhg6j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xo05s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dss4m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7t5mc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lakw3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pm21f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2lf6f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7iits"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oo54l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kpybi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ctatt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xgqkh"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_k0juu"]
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_k0juu"]
+events = [SubResource("InputEventKey_k0juu")]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k0juu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_71j4m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qfnet"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i7141"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4mrxx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7r4gi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w7kh3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e3hyu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q5onr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jhx03"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o8fc1"]
 
 [sub_resource type="Gradient" id="Gradient_u5d7i"]
 offsets = PackedFloat32Array(0, 0.2, 0.304348, 0.491935, 0.678261, 0.808696, 1)
@@ -22,6 +72,41 @@ scale = Vector2(6, 6)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
+[node name="screenLeftSide" type="Button" parent="Camera2D"]
+offset_left = -960.0
+offset_top = -535.0
+offset_right = 1.0
+offset_bottom = 540.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xo05s")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_dss4m")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7t5mc")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_lakw3")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_pm21f")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_2lf6f")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7iits")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_oo54l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kpybi")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_ctatt")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xgqkh")
+shortcut = SubResource("Shortcut_k0juu")
+
+[node name="screenRightSide" type="Button" parent="Camera2D"]
+offset_left = -1.0
+offset_top = -535.0
+offset_right = 960.0
+offset_bottom = 540.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_k0juu")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_71j4m")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_qfnet")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_i7141")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_4mrxx")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_7r4gi")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_w7kh3")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_e3hyu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q5onr")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_jhx03")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_o8fc1")
+
 [node name="hungerBar" type="Sprite2D" parent="."]
 position = Vector2(990, 128)
 scale = Vector2(1, 52.75)
@@ -30,3 +115,8 @@ texture = SubResource("GradientTexture1D_rqfy1")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_uhg6j")
 autoplay = true
+
+[connection signal="button_down" from="Camera2D/screenLeftSide" to="." method="_on_screen_left_side_button_down"]
+[connection signal="button_up" from="Camera2D/screenLeftSide" to="." method="_on_screen_left_side_button_up"]
+[connection signal="button_down" from="Camera2D/screenRightSide" to="." method="_on_screen_right_side_button_down"]
+[connection signal="button_up" from="Camera2D/screenRightSide" to="." method="_on_screen_right_side_button_up"]

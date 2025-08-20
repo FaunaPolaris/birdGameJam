@@ -2,13 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://c5ob88n27mljd" path="res://assets/mainLeterring.png" id="1_4b343"]
 [ext_resource type="Texture2D" uid="uid://b48gubokdgo8i" path="res://assets/Parallax4.png" id="1_k3bw4"]
-[ext_resource type="Script" path="res://scenes/starting.gd" id="1_oqvlx"]
+[ext_resource type="Script" uid="uid://bokc6i5rae0d3" path="res://scenes/starting.gd" id="1_oqvlx"]
 [ext_resource type="Texture2D" uid="uid://b6on0fmqaexin" path="res://assets/Parallax3.png" id="2_5bo28"]
 [ext_resource type="PackedScene" uid="uid://uywg3xek8ju3" path="res://scenes/background.tscn" id="2_nsjb1"]
 [ext_resource type="Texture2D" uid="uid://0raxeqmu6qer" path="res://assets/Parallax2.png" id="3_olo0r"]
 [ext_resource type="Texture2D" uid="uid://c6uodok8hso3c" path="res://assets/tutorial.png" id="3_vgnya"]
 [ext_resource type="Texture2D" uid="uid://bmeqg6q7vj1xv" path="res://assets/comecar.png" id="4_pmsgc"]
-[ext_resource type="Script" path="res://scenes/comecar.gd" id="7_rdodt"]
+[ext_resource type="Script" uid="uid://e3s26wcxrqnj" path="res://scenes/comecar.gd" id="7_rdodt"]
 [ext_resource type="Texture2D" uid="uid://lx24nyyfhq3n" path="res://assets/tucano.png" id="8_6bj0s"]
 [ext_resource type="AudioStream" uid="uid://byv2na2x35hse" path="res://sounds/ambience.mp3" id="11_ql2in"]
 
@@ -74,7 +74,7 @@ offset = Vector2(960, 540)
 
 [node name="tutorial" type="Sprite2D" parent="interface"]
 texture_filter = 1
-position = Vector2(990, 800)
+position = Vector2(990, 789)
 scale = Vector2(6, 6)
 texture = ExtResource("3_vgnya")
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bck862wdxfgtt"]
 
-[ext_resource type="Script" path="res://scenes/trees/tree.gd" id="1_k2kvg"]
+[ext_resource type="Script" uid="uid://410nnrrt4tqb" path="res://scenes/trees/tree.gd" id="1_k2kvg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wjrn2"]
 radius = 56.0

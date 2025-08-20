@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b8kw0wtfvn6ur" path="res://scenes/Colectables/caju.tscn" id="4_el8d8"]
 [ext_resource type="PackedScene" uid="uid://otngf4j1sa52" path="res://scenes/trees/tree_3.tscn" id="5_kebe0"]
 [ext_resource type="PackedScene" uid="uid://dj8q2balxskr2" path="res://scenes/Colectables/Ovo.tscn" id="6_c02ce"]
-[ext_resource type="Texture2D" uid="uid://bacvdxmusqn08" path="res://assets/Level 5.png" id="7_yqrh0"]
+[ext_resource type="Texture2D" uid="uid://bacvdxmusqn08" path="res://novos do projeto/assets/Level 5.png" id="7_yqrh0"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(576, -5)

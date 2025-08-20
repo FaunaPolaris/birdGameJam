@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://cixgpx7ka2n00"]
 
-[ext_resource type="Script" path="res://scenes/PicaPau.gd" id="1_0qsyi"]
+[ext_resource type="Script" uid="uid://g2x2q3er4rgp" path="res://scenes/PicaPau.gd" id="1_0qsyi"]
 [ext_resource type="Texture2D" uid="uid://b3ucnf881hjfq" path="res://assets/picaPauAmarelo.png" id="1_6gfa4"]
 [ext_resource type="AudioStream" uid="uid://cmh8p6gl5jox2" path="res://sounds/woodpecker_1_01.mp3" id="3_187jw"]
 [ext_resource type="AudioStream" uid="uid://lqrmm1a1qkkl" path="res://sounds/toco2.mp3" id="4_vhs41"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bck862wdxfgtt" path="res://scenes/trees/tree.tscn" id="1_g67aw"]
 [ext_resource type="Texture2D" uid="uid://circ56wwltd2c" path="res://assets/trees/tree_pattern_4.png" id="2_gqdd5"]
-[ext_resource type="Script" path="res://scenes/trees/tree_4.gd" id="2_wryej"]
+[ext_resource type="Script" uid="uid://bfqr5w54pmmso" path="res://scenes/trees/tree_4.gd" id="2_wryej"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ghvl1"]
 radius = 45.0
